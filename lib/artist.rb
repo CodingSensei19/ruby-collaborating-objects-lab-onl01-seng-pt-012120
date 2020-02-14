@@ -1,5 +1,5 @@
 require 'pry'
-class Artist 
+class Artist
   attr_accessor :name, :songs
 
   @@all = []
@@ -19,7 +19,7 @@ class Artist
   end
   def self.find_or_create_by_name(artist)
     self.find(artist) ? self.find(artist) : Artist.new(artist)
-  end   
+  end
   def self.find(name)
     self.all.find {|artist| artist.name == name}
   end
